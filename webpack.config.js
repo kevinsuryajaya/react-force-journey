@@ -1,6 +1,6 @@
 const path = require("path");
 
-module.exports = (argv) => ({
+module.exports = (env, argv) => ({
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
@@ -12,11 +12,23 @@ module.exports = (argv) => ({
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         include: path.resolve(__dirname, "src"),
         exclude: /(node_modules)/,
         use: ["babel-loader"]
       },
+      // {
+      //   test: /\.(png|jpg|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: "url-loader",
+      //       options: {
+      //         mimetype: "image/png",
+      //         publicPath: "assets/"
+      //       }
+      //     }
+      //   ]
+      // },
       {
         test: /\.(gif|png|jpg|svg)(\?.*$|$)/,
         use: [

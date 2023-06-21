@@ -1,14 +1,14 @@
 import React, { useState, forwardRef } from "react";
 import PropTypes from "prop-types";
-import { css } from "@emotion/react";
-import { colors } from "../../assets/mixins/mixins";
-import down from "../../assets/chevron_down.png";
-import up from "../../assets/chevron_top.png";
-import password_show from "../../assets/password_show.svg";
-import password_hide from "../../assets/password_hide.svg";
-import datepicker from "../../assets/date-picker_icon.png";
+import { css } from "@emotion/core";
+import { colors } from "../assets/mixins/mixins";
+import down from "../assets/chevron_down.png";
+import up from "../assets/chevron_top.png";
+import password_show from "../assets/password_show.svg";
+import password_hide from "../assets/password_hide.svg";
+import datepicker from "../assets/date-picker_icon.png";
 
-export const InputDirect = forwardRef((props, ref) => {
+export const Input = forwardRef((props, ref) => {
   const {
     label,
     type,

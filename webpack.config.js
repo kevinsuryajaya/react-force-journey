@@ -17,19 +17,19 @@ module.exports = (argv) => ({
         exclude: /(node_modules)/,
         use: ["babel-loader"]
       },
-    //   {
-    //     test: /\.(gif|png|jpg|svg)(\?.*$|$)/,
-    //     use: [
-    //       {
-    //         loader: "url-loader",
-    //         options: {
-    //           limit: 8192,
-    //           name: "[name].[ext]",
-    //           publicPath: "assets/"
-    //         }
-    //       }
-    //     ]
-    //   },
+      {
+        test: /\.(gif|png|jpg|svg)(\?.*$|$)/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              name: "[name].[ext]",
+              publicPath: "assets/"
+            }
+          }
+        ]
+      },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]

@@ -92,8 +92,8 @@ export const Radio = ({
           border-color: ${disabled ? "#A9A9A9" : "#3eac58"};
         }
         .input-radio .input-radio-checkmark::after {
-          top: 3px;
-          left: 3px;
+          top: 2px;
+          left: 2px;
           width: 9px;
           height: 9px;
           border-radius: 50%;
